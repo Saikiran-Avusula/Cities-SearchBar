@@ -1,97 +1,116 @@
+<!-- @format -->
+
 # Cities-SearchBar-Demo
 
 ## Project Overview
-This project is a simple web application that lets users search for city names in a search bar. As the user types, it shows **auto-suggestions** based on the city names stored in the backend database. When a user clicks on a city from the suggestions, a message appears below the search bar confirming that the city is found.  
 
-The main goal of this project is to provide a **fast and interactive search experience** for users, while also demonstrating how to connect a React frontend with a Spring Boot backend and a MySQL database.
+This is a simple web app that lets users search for city names using a search bar. As you type, the app shows auto-suggestions based on city names stored in the backend. Clicking a suggested city fills the search box and shows a confirmation message below the bar.
+
+The goal is to provide a fast, interactive search experience and show how a React frontend connects to a Spring Boot backend with a MySQL database.
 
 ---
 
 ## Features
-- **Auto-suggestions:** Cities from the database appear as the user types in the search bar.  
-- **Click to select:** When a user clicks a suggested city, it fills the search box and shows a confirmation message.  
-- **Live search:** Suggestions are fetched from the backend dynamically.  
-- **Clean UI:** Simple, modern design with light/dark theme toggle.  
-- **Backend ready:** Spring Boot application with REST APIs connected to MySQL.  
+
+- Auto-suggestions while typing.
+- Click to select a suggestion and show a confirmation message.
+- Live search: suggestions are fetched from the backend as you type.
+- Simple light/dark theme toggle and clean UI styling.
+- Backend-ready: Spring Boot REST APIs connected to MySQL.
 
 ---
 
 ## Technologies Used
-- **Frontend:** React.js, Vite, HTML, CSS, JSX  
-- **Backend:** Spring Boot, Java  
-- **Database:** MySQL  
-- **Other:** Fetch API for connecting frontend to backend, Slf4j for logging  
+
+- Frontend: React, Vite, JSX, HTML, CSS
+- Backend: Spring Boot, Java
+- Database: MySQL
+- Other: Fetch API for frontend-backend calls, SLF4J for logging
 
 ---
 
 ## Project Structure
 
 ### Backend (Spring Boot)
-- `model/` – contains the entity class for cities.  
-- `repository/` – JPA repository to query the database.  
-- `service/` – business logic for fetching cities.  
-- `controller/` – REST API endpoints for the frontend to call.  
+
+- `model/` – entity classes for cities.
+- `repository/` – JPA repositories to query the database.
+- `service/` – business logic for fetching cities.
+- `controller/` – REST API endpoints the frontend calls.
 
 ### Frontend (React)
-- `components/` – `SearchBar.jsx` component handles input and suggestions.  
-- `styles/` – CSS file with theme support and UI styling.  
-- `App.jsx` – main app component rendering the search bar.  
+
+- `src/components/` – `SearchBar.jsx` handles input and suggestions.
+- `src/styles/` – theme and UI styles (`theme.css`).
+- `src/App.jsx` – main app component rendering the search bar.
 
 ---
 
 ## Setup Instructions
 
 ### Backend
-1. Make sure MySQL is running and create a database `hotel_locations_db`.  
-2. Update `application.properties` with your MySQL credentials.  
-3. Run the Spring Boot application.  
-4. The backend provides API endpoints:  
-   - `GET /cities/getAllCities` – returns all cities  
-   - `GET /cities/suggest?keyword=` – returns cities matching input  
+
+1. Make sure MySQL is running and create a database named `hotel_locations_db`.
+2. Update `application.properties` (or `application.yml`) with your MySQL credentials.
+3. Run the Spring Boot application.
+4. Backend API endpoints (examples):
+   - `GET /cities/getAllCities` – returns all cities.
+   - `GET /cities/suggest?keyword=<term>` – returns cities that match the input term.
 
 ### Frontend
-1. Navigate to the frontend folder:  
-   ```bash
-   cd city-search-ui
 
+1. Open a terminal and go to the frontend folder:
 
-   Install dependencies:
+```powershell
+cd city-search-ui
+```
 
+2. Install dependencies:
+
+```powershell
 npm install
+```
 
+3. Start the dev server:
 
-Start the app:
-
+```powershell
 npm run dev
+```
+
+4. Open the app in your browser (default Vite URL):
+
+http://localhost:5173
+
+---
+
+## How to Use
+
+- Type a city name into the search bar.
+- Auto-suggestions appear below the input.
+- Click a suggestion to select it; a confirmation message appears below the search bar.
+- Toggle light/dark theme using the theme button.
+
+---
+
+## Screenshots
+Screenshots here showing the search bar, suggestions dropdown, and the confirmation message.
+
+<img width="1269" height="531" alt="image" src="https://github.com/user-attachments/assets/34972425-9069-462b-8092-4657b52f62dc" />
+<img width="1636" height="679" alt="image" src="https://github.com/user-attachments/assets/2be05619-4a41-4c4c-a05c-cf64dcc6e8b0" />
+<img width="1154" height="567" alt="image" src="https://github.com/user-attachments/assets/d338adaa-ea68-4f4f-abe6-e894693de61a" />
+<img width="1373" height="703" alt="image" src="https://github.com/user-attachments/assets/4b1a980e-a564-4e41-90d7-428e152ffa24" />
 
 
-Open your browser at http://localhost:5173
-
-How to Use
-
-Type a city name in the search bar.
-
-Auto-suggestions appear below the search bar.
-
-Click on a suggestion to select it.
-
-A message appears below the search bar confirming the selection.
-
-Toggle between light and dark theme using the button at the top.
-
-Screenshots
 
 
-Example of city search with auto-suggestions and selection message.
+---
 
-Future Improvements
+## Future Improvements
 
-Highlight matching letters in suggestions.
+- Highlight matching characters in suggestions.
+- Keyboard navigation (arrow keys + Enter to select).
+- Show a clear "No results found" message when there are no matches.
+- Animate the suggestion dropdown for a smoother UI.
+- Integrate external city APIs for live data.
 
-Keyboard navigation (up/down arrows + enter to select).
-
-Show “No results found” if nothing matches.
-
-Animate suggestion dropdown for smoother UI.
-
-Integrate external APIs for live city data.
+---
