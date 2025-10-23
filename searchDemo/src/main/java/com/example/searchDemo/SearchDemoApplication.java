@@ -9,7 +9,7 @@ public class SearchDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SearchDemoApplication.class, args);
 		System.out.println();
-		System.out.println("Project is run successfully");
+		System.out.println("Project is running successfully");
 	}
 
 }

@@ -34,7 +34,7 @@ const SearchBar = () => {
 
   return (
     <div className="container">
-      <div className="toggle-theme">
+      {/* <div className="toggle-theme">
         <button
           onClick={() => {
             document.body.dataset.theme =
@@ -43,7 +43,7 @@ const SearchBar = () => {
         >
           Toggle Theme
         </button>
-      </div>
+      </div> */}
 
       <h2>🔍 Search City</h2>
 
@@ -67,10 +67,10 @@ const SearchBar = () => {
         </ul>
       )}
 
-      {/* ✅ Display selected city message */}
+      {/* Displaying selected city message */}
       {selectedCity && (
         <div className="result-message">
-          ✅ <strong>{selectedCity}</strong> is found.
+          <strong>{selectedCity}</strong> is found.
         </div>
       )}
     </div>
