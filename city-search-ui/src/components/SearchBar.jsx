@@ -38,7 +38,7 @@ const SearchBar = () => {
         <button
           onClick={() => {
             document.body.dataset.theme =
-              document.body.dataset.theme === "dark" ? "light" : "dark";
+              document.body.dataset.theme === "dark" ? "light": "dark";
           }}
         >
           Toggle Theme
@@ -70,7 +70,7 @@ const SearchBar = () => {
       {/* ✅ Display selected city message */}
       {selectedCity && (
         <div className="result-message">
-          ✅ <strong>{selectedCity}</strong> is found.
+           <strong>{selectedCity}</strong> is found.
         </div>
       )}
     </div>
