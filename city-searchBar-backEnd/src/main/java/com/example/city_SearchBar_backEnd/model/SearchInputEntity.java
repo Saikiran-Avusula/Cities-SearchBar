@@ -1,4 +1,4 @@
-package com.example.searchDemo.model;
+package com.example.city_SearchBar_backEnd.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

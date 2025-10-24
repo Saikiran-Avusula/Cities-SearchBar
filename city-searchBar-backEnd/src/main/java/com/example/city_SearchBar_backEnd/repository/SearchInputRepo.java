@@ -1,6 +1,6 @@
-package com.example.searchDemo.repository;
+package com.example.city_SearchBar_backEnd.repository;
 
-import com.example.searchDemo.model.SearchInputEntity;
+import com.example.city_SearchBar_backEnd.model.SearchInputEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

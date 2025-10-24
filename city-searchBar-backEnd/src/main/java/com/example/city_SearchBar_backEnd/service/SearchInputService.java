@@ -1,6 +1,6 @@
-package com.example.searchDemo.service;
+package com.example.city_SearchBar_backEnd.service;
 
-import com.example.searchDemo.model.SearchInputEntity;
+import com.example.city_SearchBar_backEnd.model.SearchInputEntity;
 
 import java.util.List;
 
