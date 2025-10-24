@@ -61,7 +61,7 @@ The goal is to provide a fast, interactive search experience and show how a Reac
 1. Open a terminal and go to the frontend folder:
 
 ```powershell
-cd city-search-ui
+cd city-search
 ```
 
 2. Install dependencies:
@@ -91,14 +91,10 @@ http://localhost:5173
 
 ---
 
-
 <!-- <img width="1269" height="531" alt="image" src="https://github.com/user-attachments/assets/34972425-9069-462b-8092-4657b52f62dc" />
 <img width="1636" height="679" alt="image" src="https://github.com/user-attachments/assets/2be05619-4a41-4c4c-a05c-cf64dcc6e8b0" />
 <img width="1163" height="659" alt="image" src="https://github.com/user-attachments/assets/dcf64ca7-9ebe-4387-8b35-83a5fbb20c43" />
 <img width="1373" height="703" alt="image" src="https://github.com/user-attachments/assets/4b1a980e-a564-4e41-90d7-428e152ffa24" /> -->
-
-
-
 
 ---
 
