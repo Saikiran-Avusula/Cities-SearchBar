@@ -34,16 +34,6 @@ const SearchBar = () => {
 
   return (
     <div className="container">
-      {/* <div className="toggle-theme">
-        <button
-          onClick={() => {
-            document.body.dataset.theme =
-              document.body.dataset.theme === "dark" ? "light" : "dark";
-          }}
-        >
-          Toggle Theme
-        </button>
-      </div> */}
 
       <h2>🔍 Search City</h2>
 

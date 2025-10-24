@@ -33,8 +33,15 @@ body {
   border: 1px solid var(--border-color);
 }
 
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 input {
-  width: 70%;
+  flex: 1 1 0%;
+  min-width: 0;
   padding: 12px 16px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
