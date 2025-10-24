@@ -15,7 +15,6 @@ The goal is to provide a fast, interactive search experience and show how a Reac
 - Auto-suggestions while typing.
 - Click to select a suggestion and show a confirmation message.
 - Live search: suggestions are fetched from the backend as you type.
-- Simple light/dark theme toggle and clean UI styling.
 - Backend-ready: Spring Boot REST APIs connected to MySQL.
 
 ---
