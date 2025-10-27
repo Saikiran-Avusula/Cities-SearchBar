@@ -5,7 +5,7 @@
 .hostel-cards {
   display: grid;
   grid-template-columns: 1fr; /* Each card takes a full row */
-  gap: 50px;
+  gap: 20px;
   padding: 20px;
 }
 

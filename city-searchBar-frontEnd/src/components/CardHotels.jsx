@@ -1,6 +1,6 @@
 import "./CardHotel.css";
 const CardHotel = ({ hotel }) => {
-  console.log("CardHotel received props:", hotel); // Debug log
+  console.log("CardHotel received props:", hotel);
   
   if (!hotel) return null;
 
@@ -11,7 +11,7 @@ const CardHotel = ({ hotel }) => {
           <img 
             className="hotel-image" 
             src={hotel.hotel_image_url || 'https://via.placeholder.com/200x150?text=Hotel+Image'} 
-            alt={hotel.hotel_name}
+            alt={hotel.hotel_name || "Hotel image"}
             onError={(e) => {
               e.target.onerror = null;
               e.target.src = 'https://via.placeholder.com/200x150?text=Hotel+Image';

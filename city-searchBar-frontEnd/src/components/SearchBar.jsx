@@ -116,7 +116,7 @@ const SearchBar = () => {
                 <CardHotel 
                   key={hotel.hotelId} 
                   hotel={{
-                    hotel_image_url: hotel.imageUrl,
+                    hotel_image_url: hotel.hotelImageUrl,
                     hotel_name: hotel.hotelName,
                     hotel_area: hotel.hotelArea,
                     hotel_price: hotel.hotelPrice
