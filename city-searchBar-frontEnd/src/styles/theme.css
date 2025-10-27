@@ -41,7 +41,7 @@ body {
 
 input {
   width: 70%;
-  padding: 12px 16px;
+  padding: 12px 18px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
   outline: none;
@@ -51,6 +51,10 @@ input {
   transition: all 0.3s;
 }
 
+input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(21, 21, 21, 0.3);
+}
 
 ul.suggestions {
   list-style: none;
@@ -78,7 +82,8 @@ button {
   background: var(--accent-color);
   color: white;
   border: none;
-  padding: 8px 12px;
+  margin-left: 10px;
+  padding: 12px 16px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s;

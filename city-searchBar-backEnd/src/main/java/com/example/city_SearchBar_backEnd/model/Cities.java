@@ -1,13 +1,11 @@
 package com.example.city_SearchBar_backEnd.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 
 @Entity
-public class SearchInputEntity {
+@Table(name = "cities")
+public class Cities {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +14,7 @@ public class SearchInputEntity {
     private String cityName;
 
     // Default constructor required by JPA
-    public SearchInputEntity() {
+    public Cities() {
     }
 
     // Getters and Setters
