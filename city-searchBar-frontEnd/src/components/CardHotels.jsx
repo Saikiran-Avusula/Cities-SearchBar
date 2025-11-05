@@ -1,4 +1,4 @@
-import "./CardHotel.css";
+import "../styles/CardHotel.css";
 const CardHotel = ({ hotel }) => {
   console.log("CardHotel received props:", hotel);
   

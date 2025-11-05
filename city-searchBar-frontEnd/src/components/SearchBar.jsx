@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../styles/theme.css";
+import "../styles/CardHotel.css";
 import CardHotel from "./CardHotels";
+
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
