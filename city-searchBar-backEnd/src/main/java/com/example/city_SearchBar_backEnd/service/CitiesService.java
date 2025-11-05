@@ -11,4 +11,5 @@ public interface CitiesService {
 
 //    searching city names dynamically for search suggestions
     List<Cities> searchCities(String keyword);
+
 }

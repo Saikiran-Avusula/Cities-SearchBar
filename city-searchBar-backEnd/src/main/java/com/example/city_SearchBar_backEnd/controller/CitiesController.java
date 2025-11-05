@@ -38,4 +38,5 @@ public class CitiesController {
         List<Cities> suggestions = citiesService.searchCities(keyword);
         return ResponseEntity.ok(suggestions);
     }
+
 }

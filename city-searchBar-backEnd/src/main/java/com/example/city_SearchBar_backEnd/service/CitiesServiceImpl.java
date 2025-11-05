@@ -33,4 +33,5 @@ public class CitiesServiceImpl implements CitiesService {
         log.info("Auto-suggestion results for '{}': {}", keyword, byMatchedCityNameContainingIgnoreCase);
         return byMatchedCityNameContainingIgnoreCase;
     }
+
 }
