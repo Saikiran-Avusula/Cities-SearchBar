@@ -10,6 +10,17 @@ const SearchBar = () => {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showHotels, setShowHotels] = useState(false);
+  const[warning, setWarning] = useState("");
+
+  // warning message auto hide after 1 second
+  useEffect(() =>{
+    if(!warning) return;
+    const warningTImer = setTimeout(() => {
+      setWarning("");
+    }, 1000);
+    return () => clearTimeout(warningTImer);
+  }, [warning]);
+
 
   useEffect(() => {
     if (query.trim() === "") {
@@ -17,6 +28,8 @@ const SearchBar = () => {
       setShowHotels(false);
       return;
     }
+
+  
 
     const fetchCities = async () => {
       try {
@@ -40,9 +53,17 @@ const SearchBar = () => {
     setQuery(cityData.cityName || "");
     setSuggestions([]);
     setShowHotels(false);
+    setWarning("");
   };
 
   const handleSearch = () => {
+  if (query.trim() === "") {
+      setWarning("⚠️ Please enter a city name before searching.");
+      setShowHotels(false);
+      return;
+    }
+
+    setWarning(""); // Clear any previous warnings
     if (selectedCity?.cityId) {
       setLoading(true);
       setShowHotels(true);
@@ -76,11 +97,17 @@ const SearchBar = () => {
         }}
       />
 
-      <button onClick={handleSearch} disabled={!selectedCity}>
+      <button onClick={handleSearch}>
         Search
       </button>
 
+      {/* Warning message */}
+      {warning && <div className="warning-message">{warning}</div>}
+
       {/* City suggestions list */}
+      {suggestions.length < 0 && (<ul className="suggestions">
+          {console.warn("No suggestions available")}
+      </ul>)}
       {suggestions.length > 0 && (
         <ul className="suggestions">
           {suggestions.map((city) => (
