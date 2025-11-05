@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/CardHotel.css";
 import CardHotel from "./CardHotels";
+import axios from "axios";
 
 
 const SearchBar = () => {
@@ -20,9 +21,10 @@ const SearchBar = () => {
 
     const fetchCities = async () => {
       try {
-        const res = await fetch(`http://localhost:8080/cities/suggest?keyword=${query}`);
-        const data = await res.json();
-        setSuggestions(data);
+        // const res = await fetch(`http://localhost:8080/cities/suggest?keyword=${query}`);
+        // const data = await res.json();
+        const response = await axios.get(`http://localhost:8080/cities/suggest?keyword=${query}`);
+        setSuggestions(response.data);
       } catch (err) {
         console.error("Error fetching cities:", err);
       }
